@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carey Bowden — BowdenAI</title>
+<meta name="description" content="Carey Bowden. 30 years building enterprise partner ecosystems across EMEA. Now building agentic AI systems himself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #12233B;
+    --navy-deep: #0B1729;
+    --paper: #F7F6F2;
+    --ink: #1A1A1A;
+    --brass: #A8823D;
+    --brass-light: #C9A968;
+    --line: rgba(18,35,59,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  a { color: var(--navy); }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    background: rgba(247,246,242,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    z-index: 100;
+  }
+  nav .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    max-width: 900px;
+  }
+  .nav-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.75;
+    transition: opacity 0.15s;
+  }
+  .nav-links a:hover { opacity: 1; }
+
+  /* HERO */
+  header.hero {
+    padding: 96px 0 72px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--brass);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+  }
+  h1.headline {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.12;
+    color: var(--navy-deep);
+    max-width: 15ch;
+  }
+  .sub {
+    margin-top: 24px;
+    font-size: 1.15rem;
+    color: rgba(26,26,26,0.72);
+    max-width: 52ch;
+  }
+  .hero-cta {
+    margin-top: 36px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--navy-deep);
+    color: var(--paper);
+  }
+  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(11,23,41,0.25); }
+  .btn-ghost {
+    border: 1px solid var(--line);
+    color: var(--navy-deep);
+  }
+  .btn-ghost:hover { border-color: var(--brass); color: var(--brass); }
+
+  /* SECTIONS */
+  section {
+    padding: 72px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--brass);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+    color: var(--navy-deep);
+    margin-bottom: 24px;
+    max-width: 22ch;
+  }
+  p { color: rgba(26,26,26,0.8); max-width: 62ch; }
+  p + p { margin-top: 16px; }
+
+  .lede {
+    font-size: 1.08rem;
+    color: rgba(26,26,26,0.85);
+  }
+
+  /* SHIP'S LOG — signature element */
+  .log {
+    margin-top: 40px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--navy-deep);
+  }
+  .log-header {
+    padding: 14px 22px;
+    background: var(--navy);
+    color: var(--paper);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .log-header .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--brass-light);
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 6px var(--brass-light);
+  }
+  .log-entries {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.84rem;
+    color: rgba(247,246,242,0.88);
+  }
+  .log-entry {
+    padding: 14px 22px;
+    border-top: 1px solid rgba(247,246,242,0.08);
+    display: flex;
+    gap: 18px;
+  }
+  .log-entry .tag {
+    color: var(--brass-light);
+    flex-shrink: 0;
+    width: 78px;
+  }
+  .log-entry .desc { color: rgba(247,246,242,0.85); }
+
+  /* CAPABILITY GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 36px;
+  }
+  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    padding: 26px;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: white;
+  }
+  .card h3 {
+    font-size: 1.05rem;
+    color: var(--navy-deep);
+    margin-bottom: 10px;
+  }
+  .card p { font-size: 0.94rem; }
+
+  /* NED SECTION */
+  .ned-box {
+    margin-top: 32px;
+    padding: 32px;
+    background: var(--navy-deep);
+    border-radius: 6px;
+    color: var(--paper);
+  }
+  .ned-box h3 {
+    color: var(--brass-light);
+    font-size: 1.2rem;
+    margin-bottom: 14px;
+  }
+  .ned-box p { color: rgba(247,246,242,0.85); }
+  .ned-list {
+    margin-top: 20px;
+    list-style: none;
+  }
+  .ned-list li {
+    padding: 10px 0;
+    border-top: 1px solid rgba(247,246,242,0.12);
+    font-size: 0.95rem;
+    color: rgba(247,246,242,0.9);
+  }
+  .ned-list li:first-child { border-top: none; }
+  .ned-list .k { color: var(--brass-light); font-weight: 600; margin-right: 8px; }
+
+  /* FOOTER / CONTACT */
+  footer {
+    padding: 56px 0 64px;
+  }
+  .contact-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .contact-row a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--navy-deep);
+    border-bottom: 2px solid var(--brass-light);
+    padding-bottom: 2px;
+  }
+  .fine {
+    margin-top: 48px;
+    font-size: 0.82rem;
+    color: rgba(26,26,26,0.45);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="nav-mark">BowdenAI</a>
+    <ul class="nav-links">
+      <li><a href="#jeeves">Jeeves</a></li>
+      <li><a href="#advisory">Advisory</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Carey Bowden — EMEA Ecosystem Leader</span>
+    <h1 class="headline">Thirty years building the partnerships that make technology adoption real.</h1>
+    <p class="sub">Most leaders at this level talk about AI. I build it. My AI Chief of Staff, Jeeves, runs my mornings, my portfolio, and half my admin, and I wrote every line myself, starting from zero code experience.</p>
+    <div class="hero-cta">
+      <a href="#jeeves" class="btn btn-primary">See what Jeeves does</a>
+      <a href="#advisory" class="btn btn-ghost">Advisory &amp; NED</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <span class="section-label">Who I am</span>
+    <h2>An ecosystem architect, not a passenger on the AI wave.</h2>
+    <p class="lede">I've spent three decades building the partner infrastructure that lets large organisations actually adopt new technology: AWS, NVIDIA, Symantec, Citrix. Not the pitch. The plumbing. The relationships, the enablement, the go-to-market motion that turns a platform into something enterprises actually use.</p>
+    <p>Right now I lead Training and Certification Partnerships for AWS across EMEA: 189 partners, 50+ countries, a team of ten. Before that, NVIDIA's enterprise channel through the accelerated computing shift. Before that, Symantec, Citrix, and a board pitch to Cable and Wireless in 1997 that trained 2,000 staff through a technology transition most of my current peers weren't yet in the workforce for.</p>
+    <p>The throughline hasn't changed in thirty years: making the human case for technology change, at scale, at the executive level. Only the technology has changed.</p>
+  </div>
+</section>
+
+<section id="jeeves">
+  <div class="wrap">
+    <span class="section-label">The proof point</span>
+    <h2>Jeeves: an agentic AI Chief of Staff, built from scratch.</h2>
+    <p class="lede">I had never written a line of code before this. Jeeves is a fully agentic system I built and continue to build myself: he reads my portfolio, tracks career opportunities, manages my calendar and reminders, drafts and ships his own code updates with my approval, and talks to me over WhatsApp like a member of staff would.</p>
+    <p>He isn't a chatbot wrapped around a prompt. He has memory, a scoring engine for investment signals, a paper trading desk running a real strategy, and a build loop where he drafts his own code changes for me to review and ship. He runs on infrastructure I set up and maintain: GitHub, Render, Twilio, a proper email pipeline. I lead him the way I've led every team for thirty years: give him trust, clarity of purpose, and room to do the job.</p>
+
+    <div class="log">
+      <div class="log-header">
+        <span><span class="dot"></span>SHIP'S LOG</span>
+        <span>BOWDENAI / JEEVES</span>
+      </div>
+      <div class="log-entries">
+        <div class="log-entry"><span class="tag">ACT 8</span><span class="desc">Jeeves drafts and ships his own code changes, reviewed and approved before anything reaches production.</span></div>
+        <div class="log-entry"><span class="tag">SPEC-10</span><span class="desc">A live signals engine scores investment opportunities and re-checks them through the trading day.</span></div>
+        <div class="log-entry"><span class="tag">SPEC-11</span><span class="desc">A weekly audit reviews his own trading decisions and proposes adjustments, never applies them unasked.</span></div>
+        <div class="log-entry"><span class="tag">SPEC-12</span><span class="desc">Voice: a spoken interface is in development, so the conversation stops needing a keyboard at all.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="advisory">
+  <div class="wrap">
+    <span class="section-label">What I'm looking for</span>
+    <h2>Advisory and Non-Executive positions with AI-forward organisations.</h2>
+    <p class="lede">I'm building toward a senior AI leadership chapter: Chief AI Officer, VP Partnerships, Chief Partnerships Officer, or a Non-Executive Director role where practitioner credibility and ecosystem experience both matter.</p>
+
+    <div class="ned-box">
+      <h3>Where I add real value</h3>
+      <ul class="ned-list">
+        <li><span class="k">Ecosystem strategy</span>Building and scaling partner networks that drive genuine adoption, not just signed agreements.</li>
+        <li><span class="k">AI practitioner credibility</span>Hands-on build experience most commercial leaders at this level don't have.</li>
+        <li><span class="k">Enterprise GTM</span>Three decades of executive relationships across hyperscaler and enterprise technology markets.</li>
+        <li><span class="k">Governance instinct</span>Every Jeeves build ships through spec, review, and explicit approval. That discipline transfers directly to board-level AI governance conversations.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="section-label">Get in touch</span>
+    <h2>Open to a conversation.</h2>
+    <p>The best way to reach me is LinkedIn or email. I read everything myself.</p>
+    <div class="contact-row">
+      <a href="https://www.linkedin.com/in/carey-bowden-ai-ecosystem-leader-emea/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:carey@bowdenai.com">carey@bowdenai.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="fine">BowdenAI &middot; Carey Bowden &middot; Updated July 2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
