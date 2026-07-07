@@ -289,6 +289,7 @@
     <a href="#top" class="nav-mark">BowdenAI</a>
     <ul class="nav-links">
       <li><a href="#jeeves">Jeeves</a></li>
+      <li><a href="#how-jeeves-works">How Jeeves Works</a></li>
       <li><a href="#advisory">Advisory</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#test">Test Page</a></li>
@@ -337,6 +338,18 @@
         <div class="log-entry"><span class="tag">SPEC-12</span><span class="desc">Voice: a spoken interface is in development, so the conversation stops needing a keyboard at all.</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="how-jeeves-works">
+  <div class="wrap">
+    <span class="section-label">A worked example</span>
+    <h2>How Jeeves Actually Works</h2>
+    <p class="lede">Most people building an AI agent for the first time end up with something that answers questions. Jeeves does more than that, and the best way to show it is to walk through one real thing he did, start to finish.</p>
+    <p><strong>The problem.</strong> Jeeves needed a way to spot promising investment signals without me having to check the market all day. Not a headline scanner. Something that could weigh several kinds of evidence together and get more useful over time.</p>
+    <p><strong>What we built.</strong> A signals engine that pulls in fresh news, checks momentum, reads insider trading data, and scores each stock on a composite scale. It runs on its own schedule, re-checking names through the trading day, and it flags anything that crosses a meaningful threshold.</p>
+    <p><strong>Where it got interesting.</strong> A scoring engine is only as good as its weights. So we added a second layer. Every week, Jeeves reviews his own closed trades, works out which factors actually predicted a good outcome, and proposes small adjustments to how much weight each signal gets. He proposes. He never applies. I get a message asking me to approve or skip each change. Nothing adjusts itself without me saying yes.</p>
+    <p><strong>The governance bit that actually matters.</strong> Every change to Jeeves, including changes to how he scores investments, follows the same rule. Draft it, show me the diff, wait for explicit approval, then ship. Nothing merges into anything he actually runs without me looking at it first. That is not caution for the sake of it. It is the same discipline I would expect from any team I have run for thirty years. Trust people, give them room, and keep the checkpoints that matter.</p>
   </div>
 </section>
 
