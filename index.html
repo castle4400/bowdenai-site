@@ -280,6 +280,8 @@
     font-size: 0.82rem;
     color: rgba(26,26,26,0.45);
   }
+
+  #governance .ned-box + p { margin-top: 40px; }
 </style>
 </head>
 <body>
@@ -291,8 +293,8 @@
       <li><a href="#jeeves">Jeeves</a></li>
       <li><a href="#how-jeeves-works">How Jeeves Works</a></li>
       <li><a href="#advisory">Advisory</a></li>
+      <li><a href="#governance">Governance</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#test">Test Page</a></li>
     </ul>
   </div>
 </nav>
@@ -371,6 +373,32 @@
   </div>
 </section>
 
+<section id="governance">
+  <div class="wrap">
+    <span class="section-label">Non-Executive &amp; Advisory</span>
+    <h2>Board-level AI governance, from someone who has built the thing.</h2>
+    <p class="lede">Separate from any operating role, I take Non-Executive Director and Advisory positions with organisations that are serious about AI. This is not the operational job of a Chief AI Officer, running teams and shipping systems. It is the board-level one: oversight, assurance, and asking the question that stops a bad deployment before it becomes a bad quarter.</p>
+    <p>The distinction matters. A Chief AI Officer owns the build. A Non-Executive Director owns the governance of it. I can do the first, and that is exactly what makes me useful at the second.</p>
+
+    <div class="ned-box">
+      <h3>The governance gap most boards can't see</h3>
+      <p>Most enterprises have already deployed AI. Very few have deployed the governance to match. Models are in production, agents are taking actions, and the oversight was designed for software that did not make its own decisions.</p>
+      <p>That is not a technology problem. It is an organisational design problem: who approves what, where the human checkpoint sits, and what happens when the system is confident and wrong. A Non-Executive Director without hands-on experience can read the policy. One who has built an agentic system knows where the policy quietly fails, because they have watched it fail on their own build and then fixed it. That is the gap I close.</p>
+    </div>
+
+    <p><strong>A worked example, from my own system.</strong> The clearest way to show what I bring to a board is not a client story. It is what building Jeeves, my own agentic AI system, taught me about governing one.</p>
+    <p><strong>The problem.</strong> Agentic systems fail in a particular way: autonomy outruns accountability. The system is given room to act, the checkpoints do not keep pace, and by the time anyone looks, it has already done the thing. The failure is rarely the model itself. It is the design around the model.</p>
+    <p><strong>What I built.</strong> Jeeves does not reach a trading decision in a single voice. He runs three separated roles: an Analyst who makes the case, a Sceptic who argues the other side without ever seeing the Analyst's reasoning, and a Risk Officer who rules on both. Separation on a diagram is easy. Proving it is not. So the separation is mutation-tested: the suite deliberately tries to break the wall between the roles and confirms the checks catch it. An independence that cannot be broken on purpose is not independence. It is a diagram.</p>
+    <p><strong>The discipline at its highest stakes.</strong> The same propose, approve, execute rule governs the part that touches money. The trading book runs on paper, and real capital sits behind a go-live gate that was defined in advance: a track record held over time, performance ahead of its benchmark, and drawdown kept within a set limit. Capital does not go live because the system feels ready. It goes live only when the evidence clears a bar that was set before anyone was tempted to move it. Restraint, written down ahead of time, is the governance.</p>
+    <p><strong>The failure modes I caught myself.</strong> The instructive part was not the design. It was what went wrong inside it. A test suite that reported success while proving almost nothing, until mutation testing exposed that the checks were green without actually biting. Gaps where the automated guardrails did not cover what I had assumed they did, found only by running the full check instead of the convenient one. Behaviour that no ordinary test could pin down, because the model is non-deterministic, and so had to be proven with cases built on purpose rather than asserted and hoped for. Each of those is a governance lesson before it is a technical one, and none of them is visible from a policy document.</p>
+
+    <div class="ned-box">
+      <h3>The principle, in one line</h3>
+      <p>Draft it. Show the diff. Wait for explicit approval. Ship. Nothing executes without sign-off, and that includes changes to money. It is the rule Jeeves runs on every day, and it is the instinct I bring to a board: not to slow AI down, but to make sure that when it acts, a person chose to let it.</p>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <div class="wrap">
     <span class="section-label">Get in touch</span>
@@ -380,12 +408,6 @@
       <a href="https://www.linkedin.com/in/carey-bowden-ai-ecosystem-leader-emea/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a href="mailto:carey@bowdenai.com">carey@bowdenai.com</a>
     </div>
-  </div>
-</section>
-
-<section id="test">
-  <div class="wrap">
-    <p>This is a test</p>
   </div>
 </section>
 
