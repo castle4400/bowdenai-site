@@ -3,429 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carey Bowden — BowdenAI</title>
-<meta name="description" content="Carey Bowden. 30 years building enterprise partner ecosystems across EMEA. Now building agentic AI systems himself.">
+<meta name="theme-color" content="#071321">
+<title>Carey Bowden — Ecosystems, AI &amp; Governance</title>
+<meta name="description" content="Carey Bowden: three decades building enterprise technology ecosystems, now building and governing agentic AI systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&amp;family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
-  :root {
-    --navy: #12233B;
-    --navy-deep: #0B1729;
-    --paper: #F7F6F2;
-    --ink: #1A1A1A;
-    --brass: #A8823D;
-    --brass-light: #C9A968;
-    --line: rgba(18,35,59,0.12);
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    font-size: 16px;
-  }
-
-  h1, h2, h3 {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    letter-spacing: -0.01em;
-  }
-
-  a { color: var(--navy); }
-
-  .wrap {
-    max-width: 780px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
-
-  /* NAV */
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(247,246,242,0.92);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-    z-index: 100;
-  }
-  nav .wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    max-width: 900px;
-  }
-  .nav-mark {
-    font-family: 'Fraunces', serif;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--navy);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-  .nav-links {
-    display: flex;
-    gap: 28px;
-    list-style: none;
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: var(--navy);
-    font-size: 0.9rem;
-    font-weight: 500;
-    opacity: 0.75;
-    transition: opacity 0.15s;
-  }
-  .nav-links a:hover { opacity: 1; }
-
-  /* HERO */
-  header.hero {
-    padding: 96px 0 72px;
-    border-bottom: 1px solid var(--line);
-  }
-  .eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    color: var(--brass);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    display: block;
-  }
-  h1.headline {
-    font-size: clamp(2.2rem, 5vw, 3.4rem);
-    line-height: 1.12;
-    color: var(--navy-deep);
-    max-width: 15ch;
-  }
-  .sub {
-    margin-top: 24px;
-    font-size: 1.15rem;
-    color: rgba(26,26,26,0.72);
-    max-width: 52ch;
-  }
-  .hero-cta {
-    margin-top: 36px;
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .btn {
-    display: inline-block;
-    padding: 13px 26px;
-    border-radius: 3px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
-  .btn-primary {
-    background: var(--navy-deep);
-    color: var(--paper);
-  }
-  .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(11,23,41,0.25); }
-  .btn-ghost {
-    border: 1px solid var(--line);
-    color: var(--navy-deep);
-  }
-  .btn-ghost:hover { border-color: var(--brass); color: var(--brass); }
-
-  /* SECTIONS */
-  section {
-    padding: 72px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  section:last-of-type { border-bottom: none; }
-
-  .section-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--brass);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 12px;
-  }
-  h2 {
-    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
-    color: var(--navy-deep);
-    margin-bottom: 24px;
-    max-width: 22ch;
-  }
-  p { color: rgba(26,26,26,0.8); max-width: 62ch; }
-  p + p { margin-top: 16px; }
-
-  .lede {
-    font-size: 1.08rem;
-    color: rgba(26,26,26,0.85);
-  }
-
-  /* SHIP'S LOG — signature element */
-  .log {
-    margin-top: 40px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    overflow: hidden;
-    background: var(--navy-deep);
-  }
-  .log-header {
-    padding: 14px 22px;
-    background: var(--navy);
-    color: var(--paper);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.78rem;
-    letter-spacing: 0.05em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .log-header .dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    background: var(--brass-light);
-    display: inline-block;
-    margin-right: 8px;
-    box-shadow: 0 0 6px var(--brass-light);
-  }
-  .log-entries {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.84rem;
-    color: rgba(247,246,242,0.88);
-  }
-  .log-entry {
-    padding: 14px 22px;
-    border-top: 1px solid rgba(247,246,242,0.08);
-    display: flex;
-    gap: 18px;
-  }
-  .log-entry .tag {
-    color: var(--brass-light);
-    flex-shrink: 0;
-    width: 78px;
-  }
-  .log-entry .desc { color: rgba(247,246,242,0.85); }
-
-  /* CAPABILITY GRID */
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    margin-top: 36px;
-  }
-  @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
-  .card {
-    padding: 26px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: white;
-  }
-  .card h3 {
-    font-size: 1.05rem;
-    color: var(--navy-deep);
-    margin-bottom: 10px;
-  }
-  .card p { font-size: 0.94rem; }
-
-  /* NED SECTION */
-  .ned-box {
-    margin-top: 32px;
-    padding: 32px;
-    background: var(--navy-deep);
-    border-radius: 6px;
-    color: var(--paper);
-  }
-  .ned-box h3 {
-    color: var(--brass-light);
-    font-size: 1.2rem;
-    margin-bottom: 14px;
-  }
-  .ned-box p { color: rgba(247,246,242,0.85); }
-  .ned-list {
-    margin-top: 20px;
-    list-style: none;
-  }
-  .ned-list li {
-    padding: 10px 0;
-    border-top: 1px solid rgba(247,246,242,0.12);
-    font-size: 0.95rem;
-    color: rgba(247,246,242,0.9);
-  }
-  .ned-list li:first-child { border-top: none; }
-  .ned-list .k { color: var(--brass-light); font-weight: 600; margin-right: 8px; }
-
-  /* FOOTER / CONTACT */
-  footer {
-    padding: 56px 0 64px;
-  }
-  .contact-row {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-    margin-top: 24px;
-  }
-  .contact-row a {
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--navy-deep);
-    border-bottom: 2px solid var(--brass-light);
-    padding-bottom: 2px;
-  }
-  .fine {
-    margin-top: 48px;
-    font-size: 0.82rem;
-    color: rgba(26,26,26,0.45);
-  }
-
-  #governance .ned-box + p { margin-top: 40px; }
-  #advisory .ned-box + .section-label { display: block; margin-top: 56px; }
+:root{--midnight:#071321;--navy:#0d2035;--navy2:#122b45;--paper:#f4f0e7;--paper2:#ebe5d9;--ink:#14202b;--muted:#65717a;--brass:#b9904c;--gold:#dfc084;--cyan:#6dd7d5;--line:rgba(20,32,43,.14);--dline:rgba(244,240,231,.13);--radius:20px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:90px}body{background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;z-index:999;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E")}a{color:inherit}h1,h2,h3,blockquote{font-family:"Fraunces",serif;font-weight:500}p{color:#49545d}.shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}.eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:18px;color:var(--brass);font:500 .72rem/1.2 "JetBrains Mono",monospace;letter-spacing:.13em;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:1px;background:currentColor}.section-head{font-size:clamp(2rem,4vw,3.4rem);line-height:1.08;letter-spacing:-.035em;max-width:16ch}.section-intro{margin-top:22px;font-size:1.08rem;max-width:64ch}
+nav{position:fixed;inset:0 0 auto;height:76px;z-index:100;color:var(--paper);border-bottom:1px solid rgba(255,255,255,.08);background:rgba(7,19,33,.84);backdrop-filter:blur(18px)}.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{text-decoration:none;display:flex;gap:12px;align-items:center;font-weight:600}.brand-mark{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(223,192,132,.55);border-radius:50%;color:var(--gold);font-family:"Fraunces",serif}.brand small{display:block;color:rgba(244,240,231,.45);font:.58rem "JetBrains Mono",monospace;letter-spacing:.12em}.nav-links{display:flex;list-style:none;gap:30px;align-items:center}.nav-links a{text-decoration:none;color:rgba(244,240,231,.68);font-size:.84rem;transition:color .2s}.nav-links a:hover{color:var(--paper)}.nav-cta{border:1px solid rgba(223,192,132,.42);border-radius:999px;padding:9px 16px}
+.hero{min-height:790px;padding:150px 0 96px;color:var(--paper);background:radial-gradient(circle at 76% 38%,rgba(109,215,213,.10),transparent 25%),radial-gradient(circle at 62% 65%,rgba(185,144,76,.10),transparent 30%),var(--midnight);position:relative;overflow:hidden}.hero-grid{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:48px}.hero-copy{position:relative;z-index:2}.hero h1{font-family:"DM Sans",sans-serif;font-weight:500;font-size:clamp(3.1rem,6.5vw,6rem);line-height:.98;letter-spacing:-.055em;max-width:10ch}.hero h1 em{color:var(--gold);font-style:normal}.hero .lede{margin-top:28px;color:rgba(244,240,231,.67);font-size:1.08rem;max-width:55ch}.hero-actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}.button{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.9rem;transition:transform .2s}.button:hover{transform:translateY(-2px)}.button-gold{background:var(--gold);color:var(--midnight)}.button-ghost{border:1px solid rgba(244,240,231,.2);color:var(--paper)}.hero-proof{display:flex;gap:28px;margin-top:48px;padding-top:24px;border-top:1px solid var(--dline)}.proof-item strong{display:block;color:var(--paper);font-size:1.1rem}.proof-item span{color:rgba(244,240,231,.44);font:.66rem "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase}
+.constellation{min-height:540px;position:relative;isolation:isolate}.constellation:before{content:"";position:absolute;inset:7%;border:1px solid rgba(109,215,213,.14);border-radius:50%;box-shadow:0 0 80px rgba(109,215,213,.07) inset}.constellation:after{content:"";position:absolute;width:59%;aspect-ratio:1;left:20.5%;top:20%;border:1px dashed rgba(223,192,132,.16);border-radius:50%;animation:orbit 32s linear infinite}.connector{position:absolute;height:1px;left:50%;top:50%;transform-origin:left;background:linear-gradient(90deg,rgba(109,215,213,.55),rgba(109,215,213,.03));z-index:-1}.c1{width:34%;transform:rotate(-58deg)}.c2{width:37%;transform:rotate(-13deg)}.c3{width:35%;transform:rotate(33deg)}.c4{width:36%;transform:rotate(82deg)}.c5{width:37%;transform:rotate(145deg)}.c6{width:35%;transform:rotate(205deg)}.core{position:absolute;left:50%;top:50%;translate:-50% -50%;width:176px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;text-align:center;z-index:3;border:1px solid rgba(223,192,132,.58);background:radial-gradient(circle at 35% 30%,#1e4661,#0b1d30 65%);box-shadow:0 0 0 12px rgba(185,144,76,.04),0 0 80px rgba(109,215,213,.16)}.core:before,.core:after{content:"";position:absolute;inset:-14px;border:1px solid rgba(109,215,213,.14);border-radius:50%;animation:pulse 3.4s ease-in-out infinite}.core:after{inset:-29px;animation-delay:.8s}.core b{display:block;font:500 1.45rem "Fraunces",serif;letter-spacing:.03em}.core small{color:var(--gold);font:.58rem "JetBrains Mono",monospace;letter-spacing:.14em}.node{position:absolute;min-width:118px;padding:12px 15px;border-radius:12px;background:rgba(13,32,53,.9);border:1px solid rgba(244,240,231,.12);color:rgba(244,240,231,.88);font:.68rem "JetBrains Mono",monospace;box-shadow:0 14px 40px rgba(0,0,0,.18);transition:.25s}.node:hover{border-color:var(--cyan);transform:translateY(-4px)}.node span{display:block;margin-top:4px;color:rgba(244,240,231,.38);font-size:.56rem}.node:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:7px;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}.n1{left:13%;top:12%}.n2{right:4%;top:22%}.n3{right:2%;bottom:21%}.n4{left:43%;bottom:2%}.n5{left:3%;bottom:22%}.n6{left:0;top:42%}.human-gate{position:absolute;right:4%;bottom:3%;padding:9px 13px;border-radius:999px;border:1px solid rgba(223,192,132,.45);color:var(--gold);font:.58rem "JetBrains Mono",monospace;letter-spacing:.07em;text-transform:uppercase}@keyframes pulse{0%,100%{opacity:.25;transform:scale(.96)}50%{opacity:.7;transform:scale(1.04)}}@keyframes orbit{to{transform:rotate(360deg)}}
+.manifesto{padding:66px 0;background:var(--gold);color:var(--midnight);overflow:hidden}.manifesto blockquote{font-size:clamp(2.2rem,5vw,5rem);line-height:1;letter-spacing:-.045em;white-space:nowrap}.manifesto span{color:rgba(7,19,33,.34)}
+.career{padding:118px 0}.career-layout{display:grid;grid-template-columns:.7fr 1.3fr;gap:90px;align-items:start}.career-copy{position:sticky;top:118px}.career-copy p{margin-top:22px}.timeline{position:relative;padding-left:28px}.timeline:before{content:"";position:absolute;left:6px;top:16px;bottom:16px;width:1px;background:linear-gradient(var(--brass),rgba(185,144,76,.1))}.era{position:relative;padding:0 0 48px 34px}.era:last-child{padding-bottom:0}.era:before{content:"";position:absolute;left:-28px;top:8px;width:11px;height:11px;border:2px solid var(--paper);border-radius:50%;background:var(--brass);box-shadow:0 0 0 1px var(--brass)}.era-year{color:var(--brass);font:.68rem "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.era h3{font-size:1.65rem;margin:4px 0 6px}.era p{font-size:.94rem;max-width:52ch}
+.system{padding:118px 0;color:var(--paper);background:var(--midnight)}.system .section-head{color:var(--paper)}.system .section-intro{color:rgba(244,240,231,.58)}.system-top{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:end}.system-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:25px;border:1px solid var(--dline);border-radius:var(--radius);overflow:hidden}.sys-stat{padding:24px;border-left:1px solid var(--dline)}.sys-stat:first-child{border-left:0}.sys-stat b{display:block;color:var(--gold);font:500 2rem "Fraunces",serif}.sys-stat span{color:rgba(244,240,231,.4);font:.58rem "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}.architecture{margin-top:74px;display:grid;grid-template-columns:1fr 54px 1fr 54px 1fr;align-items:stretch}.arch-stage{border:1px solid var(--dline);border-radius:var(--radius);padding:28px;background:rgba(255,255,255,.025)}.arch-stage small{color:var(--gold);font:.63rem "JetBrains Mono",monospace;letter-spacing:.1em}.arch-stage h3{margin:8px 0 18px;font-size:1.35rem}.source-list,.role-list{display:grid;gap:9px;list-style:none}.source-list li,.role-list li{padding:10px 12px;border-radius:8px;background:rgba(244,240,231,.05);color:rgba(244,240,231,.68);font-size:.8rem}.role-list li{border-left:2px solid var(--cyan)}.arch-arrow{display:grid;place-items:center;color:var(--cyan);font-size:1.5rem}.approval{border-color:rgba(223,192,132,.5);background:linear-gradient(145deg,rgba(185,144,76,.13),rgba(255,255,255,.02))}.approval-sequence{display:grid;gap:8px}.approval-sequence span{display:flex;gap:10px;align-items:center;color:rgba(244,240,231,.7);font-size:.8rem}.approval-sequence b{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;color:var(--midnight);background:var(--gold);font:.6rem "JetBrains Mono",monospace}.arch-caption{margin-top:20px;color:rgba(244,240,231,.35);font:.63rem "JetBrains Mono",monospace;text-align:right}.ship-log{margin-top:70px;border:1px solid var(--dline);border-radius:var(--radius);overflow:hidden;background:#081725}.log-head{display:flex;justify-content:space-between;padding:15px 20px;border-bottom:1px solid var(--dline);color:rgba(244,240,231,.54);font:.64rem "JetBrains Mono",monospace;letter-spacing:.08em}.live-dot{display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:#70d99f;box-shadow:0 0 10px #70d99f}.log-grid{display:grid;grid-template-columns:repeat(4,1fr)}.log-entry{min-height:180px;padding:22px;border-right:1px solid var(--dline)}.log-entry:last-child{border-right:0}.log-entry .tag{color:var(--gold);font:.68rem "JetBrains Mono",monospace}.log-entry h3{margin:12px 0 9px;font-size:1.08rem}.log-entry p{color:rgba(244,240,231,.45);font-size:.77rem}
+.track{padding:118px 0}.track-head{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:end}.track-head p{font-size:1.07rem}.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin-top:62px;border-top:1px solid var(--line);border-left:1px solid var(--line)}.metric{min-height:190px;padding:27px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden}.metric:after{content:"";position:absolute;right:-30px;bottom:-30px;width:100px;height:100px;border:1px solid rgba(185,144,76,.12);border-radius:50%}.metric strong{display:block;color:var(--navy);font:500 clamp(2.2rem,4vw,3.6rem) "Fraunces",serif;letter-spacing:-.04em;line-height:1}.metric span{display:block;margin-top:16px;color:var(--muted);font-size:.79rem;max-width:17ch}.track-note{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:42px}.track-note p{font-size:.92rem}
+.governance{padding:118px 0;background:var(--paper2)}.gov-layout{display:grid;grid-template-columns:.88fr 1.12fr;gap:78px;align-items:center}.gov-copy p{margin-top:22px}.boundary{border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,255,255,.36);padding:28px;box-shadow:0 26px 80px rgba(7,19,33,.06)}.boundary-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;font:.63rem "JetBrains Mono",monospace;letter-spacing:.08em;color:var(--muted)}.boundary-grid{display:grid;grid-template-columns:1fr 72px 1fr;min-height:340px}.machine-side,.human-side{display:flex;flex-direction:column;justify-content:center;gap:12px}.machine-side span,.human-side span{padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-size:.76rem;background:rgba(255,255,255,.42)}.human-side span{border-color:rgba(185,144,76,.35)}.gate{position:relative;display:grid;place-items:center}.gate:before{content:"";position:absolute;top:0;bottom:0;width:1px;background:var(--brass)}.gate b{position:relative;z-index:1;writing-mode:vertical-rl;transform:rotate(180deg);padding:13px 8px;border-radius:999px;background:var(--brass);color:#fff;font:.55rem "JetBrains Mono",monospace;letter-spacing:.08em}.principle{margin-top:30px;padding-top:25px;border-top:1px solid var(--line);font:500 1.25rem/1.4 "Fraunces",serif;color:var(--navy)}
+.advisory{padding:118px 0;background:var(--navy);color:var(--paper)}.advisory-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}.advisory .section-head{color:var(--paper)}.advisory .section-intro{color:rgba(244,240,231,.56)}.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.value-card{padding:24px;border-radius:14px;border:1px solid var(--dline);background:rgba(255,255,255,.035)}.value-card .num{color:var(--gold);font:.62rem "JetBrains Mono",monospace}.value-card h3{margin:8px 0;font-size:1.15rem}.value-card p{color:rgba(244,240,231,.43);font-size:.8rem}
+.contact{padding:110px 0 52px}.contact-panel{display:grid;grid-template-columns:1.1fr .9fr;border-top:1px solid var(--line);padding-top:52px}.contact h2{font-size:clamp(3rem,6vw,6rem);line-height:.95;letter-spacing:-.05em;max-width:11ch}.contact-links{display:flex;flex-direction:column;justify-content:end;align-items:flex-start;gap:16px}.contact-links a{text-decoration:none;font-size:1.02rem;border-bottom:1px solid var(--brass);padding-bottom:4px}footer{margin-top:76px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font:.62rem "JetBrains Mono",monospace}[data-reveal]{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}[data-reveal].visible{opacity:1;transform:none}
+@media(max-width:900px){.nav-links li:not(:last-child){display:none}.hero{padding-top:124px}.hero-grid,.career-layout,.system-top,.track-head,.gov-layout,.advisory-grid,.contact-panel{grid-template-columns:1fr}.hero h1{max-width:12ch}.constellation{min-height:500px}.career-copy{position:static}.architecture{grid-template-columns:1fr;gap:14px}.arch-arrow{transform:rotate(90deg);height:30px}.log-grid,.metrics{grid-template-columns:1fr 1fr}.log-entry:nth-child(2){border-right:0}.log-entry{border-bottom:1px solid var(--dline)}.track-note{grid-template-columns:1fr}.contact-links{margin-top:40px}}
+@media(max-width:620px){.shell{width:min(100% - 30px,1180px)}.hero{min-height:auto}.hero-proof{gap:18px;flex-wrap:wrap}.constellation{min-height:430px;transform:scale(.9);margin-inline:-24px}.node{min-width:100px;padding:9px;font-size:.58rem}.core{width:142px}.manifesto blockquote{white-space:normal}.career,.system,.track,.governance,.advisory{padding:84px 0}.system-stats,.metrics,.value-grid{grid-template-columns:1fr 1fr}.sys-stat:nth-child(3){grid-column:span 2;border-left:0;border-top:1px solid var(--dline)}.metric{min-height:150px;padding:20px}.log-grid{grid-template-columns:1fr}.log-entry{border-right:0;min-height:0}.boundary{padding:18px}.boundary-grid{grid-template-columns:1fr 54px 1fr}footer{flex-direction:column;gap:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}[data-reveal]{opacity:1;transform:none}}
+.hero h1{font-family:"Fraunces",serif;font-weight:500}
+.manifesto blockquote{font-size:clamp(1.5rem,2.6vw,2.5rem)}
 </style>
 </head>
 <body>
-
-<nav>
-  <div class="wrap">
-    <a href="#top" class="nav-mark">BowdenAI</a>
-    <ul class="nav-links">
-      <li><a href="#jeeves">Jeeves</a></li>
-      <li><a href="#how-jeeves-works">How Jeeves Works</a></li>
-      <li><a href="#advisory">Advisory</a></li>
-      <li><a href="#governance">Governance</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="wrap">
-    <span class="eyebrow">Carey Bowden — EMEA Ecosystem Leader</span>
-    <h1 class="headline">Thirty years building the partnerships that make technology adoption real.</h1>
-    <p class="sub">Most leaders at this level talk about AI. I build it. My AI Chief of Staff, Jeeves, runs my mornings, my portfolio, and half my admin, and I wrote every line myself, starting from zero code experience.</p>
-    <div class="hero-cta">
-      <a href="#jeeves" class="btn btn-primary">See what Jeeves does</a>
-      <a href="#advisory" class="btn btn-ghost">Advisory &amp; NED</a>
-    </div>
-  </div>
-</header>
-
-<section id="about">
-  <div class="wrap">
-    <span class="section-label">Who I am</span>
-    <h2>An ecosystem architect, not a passenger on the AI wave.</h2>
-    <p class="lede">I've spent three decades building the partner infrastructure that lets large organisations actually adopt new technology: AWS, NVIDIA, Symantec, Citrix. Not the pitch. The plumbing. The relationships, the enablement, the go-to-market motion that turns a platform into something enterprises actually use.</p>
-    <p>Right now I lead Training and Certification Partnerships for AWS across EMEA: 189 partners, 50+ countries, a team of ten. Before that, NVIDIA's enterprise channel through the accelerated computing shift. Before that, Symantec, Citrix, and a board pitch to Cable and Wireless in 1997 that trained 2,000 staff through a technology transition most of my current peers weren't yet in the workforce for.</p>
-    <p>The throughline hasn't changed in thirty years: making the human case for technology change, at scale, at the executive level. Only the technology has changed.</p>
-  </div>
-</section>
-
-<section id="jeeves">
-  <div class="wrap">
-    <span class="section-label">The proof point</span>
-    <h2>Jeeves: an agentic AI Chief of Staff, built from scratch.</h2>
-    <p class="lede">I had never written a line of code before this. Jeeves is a fully agentic system I built and continue to build myself: he reads my portfolio, tracks career opportunities, manages my calendar and reminders, drafts and ships his own code updates with my approval, and talks to me over WhatsApp like a member of staff would.</p>
-    <p>He isn't a chatbot wrapped around a prompt. He has memory, a scoring engine for investment signals, a paper trading desk running a real strategy, and a build loop where he drafts his own code changes for me to review and ship. He runs on infrastructure I set up and maintain: GitHub, Render, Twilio, a proper email pipeline. I lead him the way I've led every team for thirty years: give him trust, clarity of purpose, and room to do the job.</p>
-
-    <div class="log">
-      <div class="log-header">
-        <span><span class="dot"></span>SHIP'S LOG</span>
-        <span>BOWDENAI / JEEVES</span>
-      </div>
-      <div class="log-entries">
-        <div class="log-entry"><span class="tag">ACT 8</span><span class="desc">Jeeves drafts and ships his own code changes, reviewed and approved before anything reaches production.</span></div>
-        <div class="log-entry"><span class="tag">SPEC-10</span><span class="desc">A live signals engine scores investment opportunities and re-checks them through the trading day.</span></div>
-        <div class="log-entry"><span class="tag">SPEC-11</span><span class="desc">A weekly audit reviews his own trading decisions and proposes adjustments, never applies them unasked.</span></div>
-        <div class="log-entry"><span class="tag">SPEC-12</span><span class="desc">Voice: a spoken interface is in development, so the conversation stops needing a keyboard at all.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="how-jeeves-works">
-  <div class="wrap">
-    <span class="section-label">A worked example</span>
-    <h2>How Jeeves Actually Works</h2>
-    <p class="lede">Most people building an AI agent for the first time end up with something that answers questions. Jeeves does more than that, and the best way to show it is to walk through one real thing he did, start to finish.</p>
-    <p><strong>The problem.</strong> Jeeves needed a way to spot promising investment signals without me having to check the market all day. Not a headline scanner. Something that could weigh several kinds of evidence together and get more useful over time.</p>
-    <p><strong>What we built.</strong> A signals engine that pulls in fresh news, checks momentum, reads insider trading data, and scores each stock on a composite scale. It runs on its own schedule, re-checking names through the trading day, and it flags anything that crosses a meaningful threshold.</p>
-    <p><strong>Where it got interesting.</strong> A scoring engine is only as good as its weights. So we added a second layer. Every week, Jeeves reviews his own closed trades, works out which factors actually predicted a good outcome, and proposes small adjustments to how much weight each signal gets. He proposes. He never applies. I get a message asking me to approve or skip each change. Nothing adjusts itself without me saying yes.</p>
-    <p><strong>The governance bit that actually matters.</strong> Every change to Jeeves, including changes to how he scores investments, follows the same rule. Draft it, show me the diff, wait for explicit approval, then ship. Nothing merges into anything he actually runs without me looking at it first. That is not caution for the sake of it. It is the same discipline I would expect from any team I have run for thirty years. Trust people, give them room, and keep the checkpoints that matter.</p>
-  </div>
-</section>
-
-<section id="advisory">
-  <div class="wrap">
-    <span class="section-label">What I'm looking for</span>
-    <h2>Advisory and Non-Executive positions with AI-forward organisations.</h2>
-    <p class="lede">I'm building toward a senior AI leadership chapter: Chief AI Officer, VP Partnerships, Chief Partnerships Officer, or a Non-Executive Director role where practitioner credibility and ecosystem experience both matter.</p>
-
-    <div class="ned-box">
-      <h3>Where I add real value</h3>
-      <ul class="ned-list">
-        <li><span class="k">Ecosystem strategy</span>Building and scaling partner networks that drive genuine adoption, not just signed agreements.</li>
-        <li><span class="k">AI practitioner credibility</span>Hands-on build experience most commercial leaders at this level don't have.</li>
-        <li><span class="k">Enterprise GTM</span>Three decades of executive relationships across hyperscaler and enterprise technology markets.</li>
-        <li><span class="k">Governance instinct</span>Every Jeeves build ships through spec, review, and explicit approval. That discipline transfers directly to board-level AI governance conversations.</li>
-      </ul>
-    </div>
-
-    <span class="section-label">Track record</span>
-    <h2>Scaling AI adoption across a 24,000-customer base.</h2>
-    <p>For FY26, an EMEA organisation set out to bring Generative AI adoption to the top 20% of its highest-spending customers. Fewer than 10% of that base had ever received a training offer, and fewer than 2% had been connected to a training solution. Across roughly 24,000 customers, the job was building a systematic route from customer intent to delivered training, through a network of 189 training partners across 50+ countries.</p>
-    <p>Earlier attempts had failed on data quality and internal buy-in. Account teams held the customer relationship while training partners held delivery capacity, with no agreed rules connecting the two and no incentive for either side to make it happen. Some markets had strong field sponsorship; others needed a different, more scaled approach. And there was no governance model for scaling a fully subscribed programme responsibly.</p>
-    <p>Leading the programme, I designed a three-layer engagement architecture: a relationship-led motion for account teams already close to the customer, a scale-led motion using AI tooling to reach customers relationship-led engagement alone couldn't touch, and a conversion layer through training partners across every EMEA sub-region. Courses were matched to customer maturity rather than pushed uniformly, and the whole programme was built around utilisation and paid-conversion gates rather than an open-ended commitment, so growth stayed accountable to actual customer demand, not ambition.</p>
-    <p>Within three months of launch, 14.5k customers had received a Generative AI training offer, covering 54% of the customers in scope. 65% of account managers actively engaged with the programme across a dispersed team. 811 people registered and 532 attended, across 34 events. In the UK and Ireland, half the registered companies were entirely new to the partner network. Sub-Saharan Africa alone contributed 87 attendees across 66 customers in 6 countries. The results supported approval for a 4,255-place next-phase capacity plan, built on the same gated, controlled model.</p>
-    <p>It's the same throughline as everything else here: relationship-led and scale-led work well together when the governance is disciplined and the reporting is honest.</p>
-  </div>
-</section>
-
-<section id="governance">
-  <div class="wrap">
-    <span class="section-label">Non-Executive &amp; Advisory</span>
-    <h2>Board-level AI governance, from someone who has built the thing.</h2>
-    <p class="lede">Separate from any operating role, I take Non-Executive Director and Advisory positions with organisations that are serious about AI. This is not the operational job of a Chief AI Officer, running teams and shipping systems. It is the board-level one: oversight, assurance, and asking the question that stops a bad deployment before it becomes a bad quarter.</p>
-    <p>The distinction matters. A Chief AI Officer owns the build. A Non-Executive Director owns the governance of it. I can do the first, and that is exactly what makes me useful at the second.</p>
-
-    <div class="ned-box">
-      <h3>The governance gap most boards can't see</h3>
-      <p>Most enterprises have already deployed AI. Very few have deployed the governance to match. Models are in production, agents are taking actions, and the oversight was designed for software that did not make its own decisions.</p>
-      <p>That is not a technology problem. It is an organisational design problem: who approves what, where the human checkpoint sits, and what happens when the system is confident and wrong. A Non-Executive Director without hands-on experience can read the policy. One who has built an agentic system knows where the policy quietly fails, because they have watched it fail on their own build and then fixed it. That is the gap I close.</p>
-    </div>
-
-    <p><strong>A worked example, from my own system.</strong> The clearest way to show what I bring to a board is not a client story. It is what building Jeeves, my own agentic AI system, taught me about governing one.</p>
-    <p><strong>The problem.</strong> Agentic systems fail in a particular way: autonomy outruns accountability. The system is given room to act, the checkpoints do not keep pace, and by the time anyone looks, it has already done the thing. The failure is rarely the model itself. It is the design around the model.</p>
-    <p><strong>What I built.</strong> Jeeves does not reach a trading decision in a single voice. He runs three separated roles: an Analyst who makes the case, a Sceptic who argues the other side without ever seeing the Analyst's reasoning, and a Risk Officer who rules on both. Separation on a diagram is easy. Proving it is not. So the separation is mutation-tested: the suite deliberately tries to break the wall between the roles and confirms the checks catch it. An independence that cannot be broken on purpose is not independence. It is a diagram.</p>
-    <p><strong>The discipline at its highest stakes.</strong> The same propose, approve, execute rule governs the part that touches money. The trading book runs on paper, and real capital sits behind a go-live gate that was defined in advance: a track record held over time, performance ahead of its benchmark, and drawdown kept within a set limit. Capital does not go live because the system feels ready. It goes live only when the evidence clears a bar that was set before anyone was tempted to move it. Restraint, written down ahead of time, is the governance.</p>
-    <p><strong>The failure modes I caught myself.</strong> The instructive part was not the design. It was what went wrong inside it. A test suite that reported success while proving almost nothing, until mutation testing exposed that the checks were green without actually biting. Gaps where the automated guardrails did not cover what I had assumed they did, found only by running the full check instead of the convenient one. Behaviour that no ordinary test could pin down, because the model is non-deterministic, and so had to be proven with cases built on purpose rather than asserted and hoped for. Each of those is a governance lesson before it is a technical one, and none of them is visible from a policy document.</p>
-
-    <div class="ned-box">
-      <h3>The principle, in one line</h3>
-      <p>Draft it. Show the diff. Wait for explicit approval. Ship. Nothing executes without sign-off, and that includes changes to money. It is the rule Jeeves runs on every day, and it is the instinct I bring to a board: not to slow AI down, but to make sure that when it acts, a person chose to let it.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <span class="section-label">Get in touch</span>
-    <h2>Open to a conversation.</h2>
-    <p>The best way to reach me is LinkedIn or email. I read everything myself.</p>
-    <div class="contact-row">
-      <a href="https://www.linkedin.com/in/carey-bowden-ai-ecosystem-leader-emea/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="mailto:carey@bowdenai.com">carey@bowdenai.com</a>
-      <a href="files/Carey_Bowden_CV.pdf" download>Download CV</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <p class="fine">BowdenAI &middot; Carey Bowden &middot; Updated July 2026</p>
-  </div>
-</footer>
-
+<nav aria-label="Primary navigation"><div class="shell nav-inner"><a class="brand" href="#top"><span class="brand-mark">B</span><span>BowdenAI<small>BUILD · GOVERN · SCALE</small></span></a><ul class="nav-links"><li><a href="#journey">Journey</a></li><li><a href="#jeeves">Jeeves</a></li><li><a href="#track-record">Track record</a></li><li><a href="#governance">Governance</a></li><li><a class="nav-cta" href="#contact">Start a conversation</a></li></ul></div></nav>
+<main>
+<header class="hero" id="top"><div class="shell hero-grid">
+  <div class="hero-copy" data-reveal><div class="eyebrow">Carey Bowden · EMEA Ecosystem Leader</div><h1>Experience. Integrity. Judgement. <em>Proven delivery.</em></h1><p class="lede">Thirty years building the partnerships, operating models and governance that turn a platform into something enterprises actually use. Now I build agentic AI systems myself.</p><div class="hero-actions"><a class="button button-gold" href="#jeeves">Meet Jeeves <span>↓</span></a><a class="button button-ghost" href="#governance">Board &amp; advisory work</a></div><div class="hero-proof"><div class="proof-item"><strong>30 years</strong><span>technology adoption</span></div><div class="proof-item"><strong>189 partners</strong><span>across EMEA</span></div><div class="proof-item"><strong>1 working agent</strong><span>built, not presented</span></div></div></div>
+  <div class="constellation" aria-label="A visual map of Jeeves and its connected capabilities" data-reveal><i class="connector c1"></i><i class="connector c2"></i><i class="connector c3"></i><i class="connector c4"></i><i class="connector c5"></i><i class="connector c6"></i><div class="core"><div><small>ORCHESTRATOR</small><b>Jeeves</b><small>LIVE SYSTEM</small></div></div><div class="node n1">Memory<span>context + tasks</span></div><div class="node n2">Research<span>news + files</span></div><div class="node n3">Markets<span>5 paper books</span></div><div class="node n4">Build<span>spec → code</span></div><div class="node n5">Career<span>radar + pipeline</span></div><div class="node n6">Comms<span>WhatsApp + email</span></div><div class="human-gate">Carey approval required</div></div>
+</div></header>
+<section class="manifesto"><div class="shell"><blockquote>Technology creates opportunity. <span>Ecosystems make it happen.</span></blockquote></div></section>
+<section class="career" id="journey"><div class="shell career-layout"><div class="career-copy" data-reveal><div class="eyebrow">Five technology waves</div><h2 class="section-head">The technology changes. The human problem doesn't.</h2><p>My career has been spent where technical possibility meets commercial reality: making the human case for change, building the route to market, and scaling it across countries and cultures.</p></div><div class="timeline">
+  <article class="era" data-reveal><div class="era-year">1990s · Citrix</div><h3>Work moves beyond the office</h3><p>Virtualisation changed where work could happen. Adoption depended on partners who could explain and implement the shift.</p></article>
+  <article class="era" data-reveal><div class="era-year">2000s · Symantec</div><h3>Trust becomes infrastructure</h3><p>Enterprise security moved from product conversation to board-level dependency, demanding scale, clarity and confidence.</p></article>
+  <article class="era" data-reveal><div class="era-year">2010s · NVIDIA</div><h3>Compute changes what is possible</h3><p>Accelerated computing opened new enterprise markets. The channel had to learn a new language and a new value story.</p></article>
+  <article class="era" data-reveal><div class="era-year">2020s · AWS</div><h3>Skills become the adoption layer</h3><p>Across 50+ countries and 189 partners, training turns cloud intent into deployed customer capability.</p></article>
+  <article class="era" data-reveal><div class="era-year">Now · Agentic AI</div><h3>Software begins to act</h3><p>The next adoption challenge is not simply capability. It is autonomy, operating design and accountable human control.</p></article>
+</div></div></section>
+<section class="system" id="jeeves"><div class="shell">
+  <div class="system-top"><div data-reveal><div class="eyebrow">The proof point</div><h2 class="section-head">Jeeves is a working agentic system, not a deck about one.</h2></div><div><p class="section-intro">I started with no coding experience. Jeeves now remembers, researches, monitors, drafts, builds and asks permission before high-stakes action. It operates across seven services with an explicit human approval layer.</p><div class="system-stats" data-reveal><div class="sys-stat"><b>7</b><span>connected services</span></div><div class="sys-stat"><b>5</b><span>paper traders live</span></div><div class="sys-stat"><b>16+</b><span>routed intents</span></div></div></div></div>
+  <div class="architecture" data-reveal><article class="arch-stage"><small>01 / EVIDENCE</small><h3>Read the world</h3><ul class="source-list"><li>Fresh news &amp; research</li><li>Momentum &amp; market data</li><li>Insider and catalyst signals</li><li>Memory &amp; prior decisions</li></ul></article><div class="arch-arrow">→</div><article class="arch-stage"><small>02 / DELIBERATION</small><h3>Separate the voices</h3><ul class="role-list"><li>Analyst makes the case</li><li>Sceptic challenges it blind</li><li>Risk Officer rules on both</li><li>Tests try to break separation</li></ul></article><div class="arch-arrow">→</div><article class="arch-stage approval"><small>03 / CONTROL</small><h3>Human approval</h3><div class="approval-sequence"><span><b>1</b>Propose the action</span><span><b>2</b>Show evidence or diff</span><span><b>3</b>Wait for Carey</span><span><b>4</b>Execute and audit</span></div></article></div><p class="arch-caption">Architecture simplified from Jeeves Journey Map v15 · September 2026</p>
+  <div class="ship-log" data-reveal><div class="log-head"><span><span class="live-dot"></span>SHIP'S LOG / SELECTED SYSTEMS</span><span>STATUS: OPERATING</span></div><div class="log-grid"><article class="log-entry"><span class="tag">ACT 03</span><h3>Reads the world</h3><p>Daily briefing, inbox triage, research capture and a memory layer that prevents repetition.</p></article><article class="log-entry"><span class="tag">ACT 04</span><h3>Watches markets</h3><p>Five specialist paper-trading books with separated Analyst, Sceptic and Risk Officer roles.</p></article><article class="log-entry"><span class="tag">ACT 08</span><h3>Builds himself</h3><p>Draft, confirm, ship or abort through WhatsApp. No change reaches production without approval.</p></article><article class="log-entry"><span class="tag">ACT 10</span><h3>The destination</h3><p>Applied AI leadership: practitioner credibility joined to ecosystem scale and board-level governance.</p></article></div></div>
+</div></section>
+<section class="track" id="track-record"><div class="shell"><div class="track-head" data-reveal><div><div class="eyebrow">Enterprise scale</div><h2 class="section-head">From strategy to customer behaviour.</h2></div><p>For a 24,000-customer EMEA population, I designed a three-layer Generative AI training motion: relationship-led engagement, AI-enabled scale and partner conversion—governed by real utilisation and paid-conversion gates.</p></div><div class="metrics" data-reveal><div class="metric"><strong>24k</strong><span>customers in the addressable base</span></div><div class="metric"><strong>14.5k</strong><span>received a GenAI training offer</span></div><div class="metric"><strong>65%</strong><span>account-manager engagement</span></div><div class="metric"><strong>811</strong><span>registrations generated</span></div><div class="metric"><strong>532</strong><span>attendees across EMEA</span></div><div class="metric"><strong>34</strong><span>events delivered</span></div><div class="metric"><strong>189</strong><span>training partners</span></div><div class="metric"><strong>50+</strong><span>countries in the ecosystem</span></div></div><div class="track-note" data-reveal><p>Earlier attempts had stalled on data quality and internal buy-in. The answer was not a larger campaign; it was an operating model that connected account-team trust to partner delivery capacity with explicit rules.</p><p>The results supported a 4,255-place next-phase capacity plan. Relationship-led and scale-led motions work together when governance is disciplined and reporting is honest.</p></div></div></section>
+<section class="governance" id="governance"><div class="shell gov-layout"><div class="gov-copy" data-reveal><div class="eyebrow">The control boundary</div><h2 class="section-head">Autonomy should expand. Accountability should never disappear.</h2><p>Most organisations already have AI in production. Far fewer have redesigned authority around systems that can decide and act.</p><p>Building Jeeves exposed the quiet failures a policy document misses: checks that report green without biting, role separation that exists only on a diagram, and autonomous behaviour whose confidence is not evidence.</p></div><div class="boundary" data-reveal><div class="boundary-title"><span>AI AUTONOMY</span><span>HUMAN ACCOUNTABILITY</span></div><div class="boundary-grid"><div class="machine-side"><span>Gather evidence</span><span>Generate options</span><span>Challenge assumptions</span><span>Draft the action</span></div><div class="gate"><b>CONTROL BOUNDARY</b></div><div class="human-side"><span>Set the mandate</span><span>Review the reasoning</span><span>Accept the risk</span><span>Authorise execution</span></div></div><div class="principle">Draft it. Show the diff. Wait for explicit approval. Ship.</div></div></div></section>
+<section class="advisory" id="advisory"><div class="shell advisory-grid"><div data-reveal><div class="eyebrow">Advisory · NED · AI leadership</div><h2 class="section-head">Practitioner credibility, ecosystem scale and governance instinct.</h2><p class="section-intro">I am building toward a senior AI leadership chapter and board roles with organisations serious about putting AI to work responsibly.</p></div><div class="value-grid" data-reveal><article class="value-card"><span class="num">01</span><h3>Ecosystem strategy</h3><p>Partner networks that produce adoption and commercial outcomes, not signed agreements.</p></article><article class="value-card"><span class="num">02</span><h3>Applied AI</h3><p>Hands-on experience building, testing and operating a real agentic system.</p></article><article class="value-card"><span class="num">03</span><h3>Enterprise GTM</h3><p>Three decades navigating hyperscaler, vendor, partner and customer incentives.</p></article><article class="value-card"><span class="num">04</span><h3>Board governance</h3><p>Clear mandates, separation of roles, evidence gates and explicit accountability.</p></article></div></div></section>
+<section class="contact" id="contact"><div class="shell"><div class="contact-panel" data-reveal><div><div class="eyebrow">Start a conversation</div><h2>What are you trying to make real?</h2></div><div class="contact-links"><p>AI leadership · Partnerships · Advisory · Non-Executive</p><a href="mailto:carey@bowdenai.com">carey@bowdenai.com ↗</a><a href="https://www.linkedin.com/in/carey-bowden-ai-ecosystem-leader-emea/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="files/Carey_Bowden_CV.pdf" download>Download CV ↓</a></div></div><footer><span>BowdenAI · Carey Bowden</span><span>BUILT WITH HUMAN APPROVAL · UPDATED SEPTEMBER 2026</span></footer></div></section>
+</main>
+<script>const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('[data-reveal]').forEach(el=>observer.observe(el));</script>
 </body>
 </html>
